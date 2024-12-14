@@ -1,3 +1,19 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+theme = 'plague'
+
+[module]
+  [[module.imports]]
+    disable = false
+    ignoreConfig = false
+    ignoreImports = true
+    path = "github.com/brianreumere/plague"  # Theme
+
+[params]
+  siteHeaderText = "Ellingson Mineral Tech Blog"
+
+  colors = "default"
+
+  [params.hcard]
+    fullName = "Eugene Belford"
