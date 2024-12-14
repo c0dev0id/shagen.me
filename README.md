@@ -23,3 +23,9 @@ Hugo Getting Started: https://gohugo.io/getting-started/quick-start/
 - Static Page: `content/contact/index.md`
 - Post Index: `content/posts/_index.md`
 
+#### Customizations
+
+- Custom CSS Override in `static/css/custom.css`
+- Shortcodes in `layouts/shortcodes/`
+    - distfiles, pastefiles: directory index shortcodes
+    - img_*: image resize shortcodes
