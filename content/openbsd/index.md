@@ -6,7 +6,7 @@ menu:
     weight: 3
 ---
 
-# OpenBSD
+![OpenBSD Logo](openbsd-logo.gif)
 
 I'm an OpenBSD developer since 2021.
 
@@ -25,6 +25,13 @@ I'm maintining some OpenBSD ports:
 - [PlayOnBSD](https://playonbsd.com): A list of games running on OpenBSD
 - [PlayOnBSD Frontend](https://pobsd.chocolatines.org): A nicer frontend for the playonbsd.com game list
 - [OpenBSD Gaming Community](https://www.reddit.com/r/openbsd_gaming): An OpenBSD Gaming community
+
+## Further resources
+
+- [OpenBSD Reddit](https://www.reddit.com/r/openbsd): Some OpenBSD developers are looking into this reddit
+- [Marc Info List Archive](https://marc.info/?w=2&r=1&s=openbsd-&q=l): Archive/Search of the OpenBSD [Mailing Lists](https://www.openbsd.org/mail.html)
+- [OpenBSD FAQ](https://www.openbsd.org/faq/index.html): The OpenBSD FAQ is the first thing a new user should read.
+- [Porter Handbook](https://www.openbsd.org/faq/ports/index.html): Fiddling with ports? Read this.
 
 ## Distfiles
 
