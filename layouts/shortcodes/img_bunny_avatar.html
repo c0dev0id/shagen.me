@@ -1,0 +1,9 @@
+{{ $original := .Page.Resources.GetMatch (.Get 0) }}
+{{ $preview := $original.Resize "x300" }}
+{{ $alt := .Get 1 }}
+
+{{ if lt $original.Height 300 }}
+<img src="{{ $original.RelPermalink }}" height="{{ $original.Height }}" alt="{{ $alt }}">
+{{ else }}
+<img src="{{ $preview.RelPermalink }}" height="{{ $preview.Height }}" alt="{{ $alt }}">
+{{ end }}

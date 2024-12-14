@@ -1,0 +1,5 @@
+  <ul>
+{{ range readDir "static/distfiles" }}
+    <li><a href="rdistfiles/{{ .Name }}">{{ .Name }}</a></li>
+{{ end }}
+  </ul>

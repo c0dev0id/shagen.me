@@ -1,0 +1,8 @@
+  <ul>
+{{ range sort (readDir "static/paste") "ModTime" "desc" | first 60 }}
+    <li class="pastelist">{{ .ModTime | dateFormat "02 Jan 2006 @ 15:04" }}: <a href="/paste/{{ .Name }}" target="_blank">{{ .Name }}</a></li>
+{{ end }}
+  </ul>
+  ... showing the last 60 results.
+
+
