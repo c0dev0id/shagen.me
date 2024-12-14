@@ -14,9 +14,14 @@ theme = 'plague'
   siteHeaderText = "Stefan Hagen / sdk"
   siteFooterText = ""
   colors = "default"
+  CustomStylesheet = "/css/custom.css"
 
 [params.hcard]
    fullName = "Stefan Hagen"
 
 [frontmatter]
   date = [':filename', ':default']
+
+# not yet
+# [permalinks]
+#   post = "/:year/:month/:title/"
