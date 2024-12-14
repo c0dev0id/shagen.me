@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://shagen.me'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Personal Website of Stefan Hagen'
 theme = 'plague'
 
 [module]
@@ -8,12 +8,15 @@ theme = 'plague'
     disable = false
     ignoreConfig = false
     ignoreImports = true
-    path = "github.com/brianreumere/plague"  # Theme
+    path = "github.com/brianreumere/plague"
 
 [params]
-  siteHeaderText = "Ellingson Mineral Tech Blog"
-
+  siteHeaderText = "Stefan Hagen / sdk"
+  siteFooterText = ""
   colors = "default"
 
-  [params.hcard]
-    fullName = "Eugene Belford"
+[params.hcard]
+   fullName = "Stefan Hagen"
+
+[frontmatter]
+  date = [':filename', ':default']
