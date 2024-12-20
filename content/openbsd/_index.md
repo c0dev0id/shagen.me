@@ -37,4 +37,4 @@ I'm maintining some OpenBSD ports:
 
 These files are used by OpenBSD ports and are not very useful when downloaded manually. However, they are useful to for me as a maintainer, and this is why this section exists.
 
-{{< distfiles >}}
+{{< php "distfiles.php" >}}

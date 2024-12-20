@@ -1,7 +1,9 @@
 <div class="footer-container">
+    {{- with .Site.Params.SiteFooterText -}}
     <div class="footer-text">
         <p>
-        {{ time.Now.Year }} shagen.me (created with <a href="https://gohugo.io">hugo</a> &amp; <a href="https://github.com/brianreumere/plague">plague</a>)
+            {{ time.Now.Year }} {{ . | markdownify }}
         </p>
     </div>
+    {{- end -}}
 </div>

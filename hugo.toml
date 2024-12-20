@@ -12,6 +12,7 @@ theme = 'plague'
 
 [params]
   siteHeaderText = "shagen.me"
+  siteFooterText = "created with &#10084;&#65039; in Hoggene"
   colors = "default"
   CustomStylesheet = "/css/custom.css"
 
