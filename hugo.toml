@@ -12,21 +12,12 @@ theme = 'plague'
 
 [params]
   siteHeaderText = "shagen.me"
-  siteFooterText = ""
+  siteFooterText = "foo"
   colors = "default"
   CustomStylesheet = "/css/custom.css"
 
 [params.hcard]
    fullName = "Stefan Hagen"
-
-[mediaTypes]
-  [mediaTypes.'application/x-php']
-    suffixes = ['php']
-
-[outputFormats]
-  [outputFormats.php]
-    mediaType = 'application/x-php'
-    isHTML = true
 
 [security]
   enableInlineShortcodes = false

@@ -6,31 +6,16 @@ build:
 clean:
 	rm -rf public resources
 
-server:
-	set +e; while true; \
-		do hugo server -D --disableFastRender --navigateToChanged; \
-		echo "hugo server stopped" | xnotify & \
-		echo "press enter to retry"; read; \
-	done
-
-server-home:
-	set +e; while true; \
-		do hugo server --baseURL="https://hugo.codevoid.de/" --appendPort=false --liveReloadPort=443 --noHTTPCache -D --disableFastRender --navigateToChanged; \
-		echo "hugo server stopped"; \
-		echo "press enter to retry"; read; \
-	done
-
-preview:
-	chrome http://localhost:1313 >/dev/null 2>&1 &
-
-edit:
-	./scripts/edit.sh
+update:
+	git add -A . || true
+	git commit -m "Content Update" || true
+	git push || true
 
 dev:
-	hugo --gc --cleanDestinationDir -D -E -F --baseURL="https://dev.shagen.me/"
-	rsync -avzP --delete public/ codevoid.de:/home/www/htdocs/shagen.dev/
+	ssh codevoid.de "echo update-development > /home/www/tmp/github-update-trigger"
 
 prod:
-	hugo --gc --cleanDestinationDir --minify
-	rsync -avzP --delete public/ codevoid.de:/home/www/htdocs/shagen/
+	ssh codevoid.de "echo update-production > /home/www/tmp/github-update-trigger"
 
+watch:
+	 while true; do ./scripts/deploy_hugo.sh; sleep 1; done
