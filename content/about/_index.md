@@ -3,12 +3,13 @@ layout: standalone
 title: About
 menu:
   main:
-    weight: 2
+    weight: 1
 ---
 
 # About
 
-{{<img_avatar avatar_me.jpg "Portrait of myself">}}
+{{<img_avatar avatar_me_bike.jpg "Portrait of myself">}}
+{{<img_avatar avatar_me_square.jpg "Portrait of myself">}}
 
 Greetings, my name is Stefan Hagen. I'm currently employed at [SAP SE](https://www.sap.com) as project manager for the [BTP ABAP Environment](https://www.sap.com/products/technology-platform/abap.html) Cloud Infrastructure. I'm also the president of the [Unix User Group Rhein Neckar e.V.](https://www.uugrn.org) and a developer at [OpenBSD](https://www.openbsd.org). I'm located in [Hockenheim, Germany](https://www.openstreetmap.org/relation/453413).
 
@@ -34,4 +35,4 @@ On the web, I'm going by "sdk" most of the time. These have been my initials bef
 {{<img_bunny_avatar avatar_bunnyD.jpg "Bunny Avatar Variant D">}}
 {{<img_bunny_avatar avatar_bunnyE.jpg "Bunny Avatar Variant E">}}
 
-I bought those bunny stock images many years ago and I'm using them frequently as avatar along with my nick name(s). It was not an exclusive purchase, so I may not be the only one using them. 
+I bought those bunny stock images many years ago and I'm using them frequently as avatar along with my nick name(s). It was not an exclusive purchase, so I may not be the only one using them.

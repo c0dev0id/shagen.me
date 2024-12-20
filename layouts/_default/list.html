@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="post-content e-content">
+    {{.Content}}
+</div>
+<p>
+<ul class="post-list-ul">
+
+{{ range .Paginator.Pages }}
+    <li class="post-list-li">
+        <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span class="post-date">
+            <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">, created on {{ .Date | time.Format "2006-01-02" }}</time>
+        </span>
+    </li>
+{{ end }}
+
+</ul>
+</p>
+{{ with .OutputFormats.Get "rss" -}}
+<p>
+    <span class="post-rss">Subscribe: <a href="{{ .Permalink }}">RSS</a></span>
+</p>
+{{ end }}
+{{ end }}

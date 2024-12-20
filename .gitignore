@@ -1,5 +1,3 @@
 .hugo_build.lock
 public/
-static/distfiles/
-static/paste/
 resources/

@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'bungee shade regular';
+    src: url('/assets/BungeeShade-Regular.ttf');
+}
+@font-face {
+    font-family: 'fira sans regular';
+    src: url('/assets/FiraSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'fira sans bold';
+    src: url('/assets/FiraSans-Bold.ttf');
+}
+@font-face {
+    font-family: 'fira mono regular';
+    src: url('/assets/FiraMono-Regular.ttf');
+}
+
+body {
+    font-family: fira sans regular;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+    font-family: fira sans bold;
+}
+code, pre {
+    font-family: fira mono regular;
+}
+
+pre {
+    overflow-x: auto;
+}
+
+tr td:first-child {
+    white-space:nowrap;
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-title a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: bungee shade regular;
+}
+
+.header-title a {
+    color: black;
+}
+
+.header-row {
+    margin-top: 10px;
+    margin-bottom: 2px;
+    font-family: fira sans bold;
+}
+
+.header-item {
+  color: black;
+  text-decoration: none;
+  margin-right: 0,5rem;
+}
+
+.header-line {
+  width: 100%;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid none none none;
+}
+
+.monospace {
+    letter-spacing: 1px;
+}

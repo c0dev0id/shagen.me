@@ -10,4 +10,6 @@ menu:
 
 Random stuff I upload to share over the internet
 
-{{< pastefiles >}}
+{{< php "pastefiles.php" >}}
+
+

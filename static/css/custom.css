@@ -1,6 +1,18 @@
 h1 {
     margin-bottom: 0.3em;
 }
-.pastelist {
+.paste-list {
     font-family: 'SF Mono', 'Consolas', monospace;
+}
+.post-date, .post-rss {
+    font-size: smaller;
+}
+.post-link {
+    font-size: 1.1em;
+    text-decoration: none;
+}
+.post-list-li {
+    list-style-type: circle;
+    padding-bottom: 4px;
+    
 }

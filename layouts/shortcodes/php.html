@@ -1,0 +1,2 @@
+{{ $file := (path.Join "layouts/php" (.Get 0)) }}
+{{- readFile $file | safeHTML -}}
