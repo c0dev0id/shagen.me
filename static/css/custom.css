@@ -23,7 +23,7 @@ p {
     
 }
 img {
-  max-width: 90%;    
+  max-width: 100%;    
 }
 a:link, a:visited, a:active {
     text-decoration: none;
