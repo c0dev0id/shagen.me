@@ -5,7 +5,7 @@ title = 'Fixing OpenHTTPd text encoding'
 tags = ['OpenBSD', 'OpenHTTPd']
 +++
 
-I'm serving a lot of text files on my web server and I want them to be displayed correctly.
+I'm serving a lot of text files with my web server and I want them to be displayed correctly.
 
 ## The Problem: Garbled Unicode Text
 
@@ -150,11 +150,9 @@ types {
 }
 ```
 
-With this configuration, the the proper Content-Type header with charset subtype will be delivered and textfiles containing unicode characters will be displayed correctly.
-
-![Image of properly displayed unicode characteres](/images/utf8text-good.png)
-
 *It's not necessary to add all the mime-types, but it's a good idea to do so.*
+
+With this configuration, the the proper Content-Type header with charset subtype will be delivered and textfiles containing unicode characters will be displayed correctly.
 
 ```
 $ curl -I https://ptrace.org/utf8text.txt
@@ -166,5 +164,7 @@ Date: Sat, 21 Dec 2024 08:15:02 GMT
 Last-Modified: Sat, 21 Dec 2024 07:53:26 GMT
 Server: OpenBSD httpd
 ```
+
+![Image of properly displayed unicode characteres](/images/utf8text-good.png)
 
 [^1]: I know there's also the file MAGIC. But here's no such concept in the web-world.
