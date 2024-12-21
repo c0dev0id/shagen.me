@@ -1,4 +1,4 @@
-+++2024-12-21_09-41-16-sshot.png 
++++
 date = '2024-12-21T08:26:27+01:00'
 draft = true
 title = 'Fixing OpenHTTPd text encoding'
