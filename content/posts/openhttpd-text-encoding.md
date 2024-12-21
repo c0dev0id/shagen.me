@@ -106,6 +106,17 @@ For this reason, the Content-Type header supports an additional subtype. This su
 
 In practical terms, it's rare nowadays to encounter text that's not utf-8 compatible, and therefore the solution is to add the utf-8 charset information to the text/plain type of the Content-Type header.
 
+```
+$ curl -I https://ptrace.org/utf8text.txt
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 98
+Content-Type: text/plain; charset=utf-8
+Date: Sat, 21 Dec 2024 08:15:02 GMT
+Last-Modified: Sat, 21 Dec 2024 07:53:26 GMT
+Server: OpenBSD httpd
+```
+
 ## Fixing the OpenHTTPd configuration
 
 Let's start by making OpenHTTPd aware of more mime types.
@@ -154,17 +165,7 @@ types {
 
 With this configuration, the the proper Content-Type header with charset subtype will be delivered and textfiles containing unicode characters will be displayed correctly.
 
-```
-$ curl -I https://ptrace.org/utf8text.txt
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 98
-Content-Type: text/plain; charset=utf-8
-Date: Sat, 21 Dec 2024 08:15:02 GMT
-Last-Modified: Sat, 21 Dec 2024 07:53:26 GMT
-Server: OpenBSD httpd
-```
-
 ![Image of properly displayed unicode characteres](/images/utf8text-good.png)
+
 
 [^1]: I know there's also the file MAGIC. But here's no such concept in the web-world.
