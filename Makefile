@@ -8,6 +8,10 @@ update:
 	git commit -m "Content Update" || true
 	git push || true
 
+server:
+	hugo server -D -E -F
+
+
 dev:
 	ssh codevoid.de \
 		"echo update-development > /home/www/tmp/github-update-trigger"
