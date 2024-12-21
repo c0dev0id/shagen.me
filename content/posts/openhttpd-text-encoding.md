@@ -17,7 +17,7 @@ The result is garbled text:
 
 ## Understanding the Content-Type Header
 
-*If you're not interested in technical details, jump to the [solution](#the-solution-content-type-charset-subtype) right away.*
+*If you're not interested in technical details, jump to the [solution](#the-solution-content-type-charset-subtype)
 
 Header fields can be explored with [curl](https://curl.se).
 
@@ -92,7 +92,7 @@ In EBCDIC Code Page 7, it would be the character "m".
 These combinations adds up to hundreds of ways how data can be interpreted as text.
 And it explains why selecting the wrong encoding often only leads to half of the characters being garbled.
 
-Luckily, most of this mess is [history](https://en.wikipedia.org/wiki/Character_encoding#History) now, thanks to the development of unicode, which defines an encoding that can take up to 4 bytes and is big enough for all the language characters in existence... and emojis.
+Luckily, most of this mess is [history](https://en.wikipedia.org/wiki/Character_encoding#History) now, thanks to the development of [unicode](https://en.wikipedia.org/wiki/Unicode), which defines an encoding that can take up to 4 bytes and is big enough for all the language characters in existence... and emojis.
 
 Unicode itself is is a concept of how code points are organized. The technical encoding exists in more than one flavor, however, the [most common character encoding](https://en.wikipedia.org/wiki/Popularity_of_text_encodings) is [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
 
