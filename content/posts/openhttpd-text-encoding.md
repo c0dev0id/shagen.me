@@ -1,4 +1,4 @@
-+++
++++2024-12-21_09-41-16-sshot.png 
 date = '2024-12-21T08:26:27+01:00'
 draft = true
 title = 'Fixing OpenHTTPd text encoding'
@@ -104,22 +104,7 @@ In the previous chapter, I described that knowing that some data is text, is not
 
 For this reason, the Content-Type header supports an additional subtype. This subtype can contain charset information, which can give more details about the encoding of the text. Like `Content-Type: text/html charset=latin1` would announce a [ISO-8859-1](https://www.charset.org/charsets/iso-8859-1) document by it's nickname "latin1".
 
-In practical terms, it's rare nowadays to encounter text that's not utf-8 compatible, and therefore the solution is to add the utf-8 charset information to the text/plain type of the Content-Type header. Like so:
-
-```
-$ curl -I https://ptrace.org/utf8text.txt
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 98
-Content-Type: text/plain; charset=utf-8
-Date: Sat, 21 Dec 2024 08:15:02 GMT
-Last-Modified: Sat, 21 Dec 2024 07:53:26 GMT
-Server: OpenBSD httpd
-```
-
-Now the browser knows what to expect, and can handle the file correctly:
-
-![Image of properly displayed unicode characteres](/images/utf8text-good.png)
+In practical terms, it's rare nowadays to encounter text that's not utf-8 compatible, and therefore the solution is to add the utf-8 charset information to the text/plain type of the Content-Type header.
 
 ## Fixing the OpenHTTPd configuration
 
@@ -134,7 +119,7 @@ types {
 ```
 
 This makes OpenHTTPd aware of all the default content types described in this file.
-The file `/usr/share/misc/mime.types` contains following line, which creates a link between the file extension `.txt` and the type, that is delivered using the Content-Type Header.
+The file `/usr/share/misc/mime.types` contains the following line, which creates a link between the file extension `.txt` and the type, that is delivered using the Content-Type Header.
 
 ```
 text/plain                     txt
@@ -167,6 +152,19 @@ types {
 
 With this configuration, the the proper Content-Type header with charset subtype will be delivered and textfiles containing unicode characters will be displayed correctly.
 
-Note: It's not necessary to add all the mime-types, but it's a good idea to do so.
+![Image of properly displayed unicode characteres](/images/utf8text-good.png)
+
+*It's not necessary to add all the mime-types, but it's a good idea to do so.*
+
+```
+$ curl -I https://ptrace.org/utf8text.txt
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 98
+Content-Type: text/plain; charset=utf-8
+Date: Sat, 21 Dec 2024 08:15:02 GMT
+Last-Modified: Sat, 21 Dec 2024 07:53:26 GMT
+Server: OpenBSD httpd
+```
 
 [^1]: I know there's also the file MAGIC. But here's no such concept in the web-world.
