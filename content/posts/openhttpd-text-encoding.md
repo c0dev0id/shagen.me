@@ -17,6 +17,8 @@ The result is garbled text:
 
 ## Understanding the Content-Type Header
 
+*If you're not interested in technical details, jump to the [solution](#the-solution-content-type-charset-subtype) right away.*
+
 Header fields can be explored with [curl](https://curl.se).
 
 ```
