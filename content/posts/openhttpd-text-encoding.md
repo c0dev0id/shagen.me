@@ -17,7 +17,7 @@ The result is garbled text:
 
 ## Understanding the Content-Type Header
 
-*If you're not interested in technical details, jump to the [solution](#the-solution-content-type-charset-subtype)
+*If you're not interested in technical details, jump to the [solution](#the-solution-content-type-charset-subtype).*
 
 Header fields can be explored with [curl](https://curl.se).
 
@@ -52,28 +52,41 @@ For binary content types like video and images, this is sufficient, because ther
 ## Why a text-type is not sufficient
 
 For text based content types, like text, xml, html and so on, this is *not* sufficient.
-Technically, text is binary data as well, but there are different ways of make readable text out of this data.
+Technically, text is binary data as well, but there are different ways to store text, and we need to know which one was used, in order to decode it.
 
 In the early computer days, when memory was sparse, only the most necessary characters were supported.
 Those were the 127 characters defined in [us-ascii](https://man.openbsd.org/ascii.7).
 As mentioned in the beginning, this is the default character set for content type `text/plain`.
 
-There's no "ö", no "ä", no "ü", no "ß" in us-ascii, and therefore these character cannot be displayed.
+There's no "ö", no "ä", no "ü", no "ß" in us-ascii, and therefore these characters cannot be displayed.
 
 However, one ascii character is stored in one byte.
 And one byte has 8 bits, which can store 256 values (2^8).
 
-That means us-ascii only occupies half of the space.
-When computers got more popular, users demanded their local characters to be displayed on the screen.
+```goat 
++---+---+---+---+---+---+---+---+   +---+---+---+---+---+---+---+---+
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |   | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
++---+---+---+---+---+---+---+---+   +---+---+---+---+---+---+---+---+
+|   |     u s - a s c i i       |   |   |     c o d e p a g e       |
+'---+---------------------------'   '---+---------------------------'
+
+```
+
+This means us-ascii only occupies half of the available space.
+When computers got more popular, users demanded to be able to use their local character sets.
 
 The half byte that could be used in addition is not enough for all of the worlds characters and symbols.
 
 The solution was to make the second half of the byte switchable.
 And this switch is called [Code Page](https://en.wikipedia.org/wiki/Code_page).
 The code page idea was not new. It was taken from another encoding, which happened to exist in parallel to ascii.
-It was called EBCDIC, and was developed and used by IBM. EBCDIC had code pages already.
+It was called EBCDIC, and was developed and used by IBM. EBCDIC had [code tables](https://en.wikibooks.org/wiki/Character_Encodings/Code_Tables/EBCDIC).
 
-The code page concept was then adapted in ASCII (or 8 Bit ASCII).
+The code table concept was then adapted in ASCII (or 8 Bit ASCII) and called code page.
+Ascii with an applied code page was called Extended ASCII.
+
+*Note: The terminology ascii (or ASCII) can be used for both: us-ascii, which is 7-bit ascii and only contains the characters used in the United States.
+And extended ascii, which is the 8-bit ascii variant that contains us-ascii plus 128 more characters from one of the code pages.*
 
 Here is the byte value of character "ö" in different encodings:
 
@@ -99,6 +112,22 @@ Unicode itself is is a concept of how code points are organized. The technical e
 UTF-8 is a variable width encoding, which means it can store common characters in one byte, but can use up to 4 bytes per character to address rarely used characters. In addition to that, it's compatible with us-ascii, which means the first 127 characters are byte compatible between ascii and utf-8.
 
 This means utf-8 can be use instead of ascii without breaking compatibility. A valid 7-bit ascii file, it also a valid utf-8 file.
+
+Due to this and the variable length, utf-8 can not store 2^32 characters, but *only* 2^21. Which is 2097152 (way more than 256, and enough to address all of the characters in the world).
+
+This could have been a happy ending, if we wouldn't have started to squeeze emojis into unicode. The old, yellow standard emojis were fine, but then people wanted emoji variants and combinations.
+
+- This is 7 characters displayed as one &rarr; &#x1F468;&#x200D;&#x1F469;&#x200D;&#x1F467;&#x200D;&#x1F466;
+
+Source:  
+`&#x1F468;&#x200D;&#x1F469;&#x200D;&#x1F467;&#x200D;&#x1F466;`
+
+- This is 10 characters displayed as one &rarr; &#x1F468;&#x1F3FF;&#x200D;&#x1F469;&#x1F3FB;&#x200D;&#x1F467;&#x200D;&#x1F466;&#x1F3FE;  (really, try to copy one of them)
+
+Source:  
+`&#x1F468;&#x1F3FF;&#x200D;&#x1F469;&#x1F3FB;&#x200D;&#x1F467;&#x200D;&#x1F466;&#x1F3FE;`
+
+Can we please going back to using images for stuff like this?
 
 ## The solution: Content-Type charset subtype
 
