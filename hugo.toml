@@ -3,6 +3,12 @@ languageCode = 'en-us'
 title = 'shagen.me'
 theme = 'plague'
 
+# add vim (there should be a += in toml...)
+[security]
+  [security.exec]
+  allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^git$', '^vim$', '^npx$', '^postcss$', '^tailwindcss$']
+
+
 [module]
   [[module.imports]]
     disable = false
