@@ -4,7 +4,7 @@ draft = true
 title = 'Attach encrypted USB disk to OSMC'
 +++
 
-{{ blogintro }}
+{{< blogintro >}}
 
 ## Preparation
 
