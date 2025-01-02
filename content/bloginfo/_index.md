@@ -17,7 +17,7 @@ The first three are most imporant. The ones below shall be common sense.
 
 I use a certain syntax in my code examples.
 
-## `$` Execute as user
+## "$" Execute as user
 
 Commands that should be executed as user, are prepended with `$`:
 
@@ -25,7 +25,7 @@ Commands that should be executed as user, are prepended with `$`:
 $ scrot -s 
 ```
 
-## `#` Execute as root
+## "#" Execute as root
 
 Commands that should be executed as root, are prepended with `#`.
 It doesn't matter if they are executed using `sudo` or `doas` or by switching to root with `su` first.
