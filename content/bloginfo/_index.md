@@ -32,9 +32,9 @@ Commands that should be executed as root, are prepended with `#`.
 You will see text or links like this: [video(1)](https://man.openbsd.org/video.1). This carries the following information:
 - I want you to read the manpage
 - The manpage is in section 1 (see [man(1)](https://man.openbsd.org/man.1) `-s` switch) and can be read with
-- ```
-- $ man 1 video
-- ```
+```
+$ man 1 video
+```
 - Based on the section, it show that it's a command, which differentiates it from the [video(4)](https://man.openbsd.org/video.4) device driver.
 
 ## Placeholder
