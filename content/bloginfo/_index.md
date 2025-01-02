@@ -3,9 +3,7 @@ layout: standalone
 title: Blog Information
 ---
 
-Here's some information you should know when you read my blog articles.
-
-# Target Audience
+## Target Audience
 
 I'm not targeting the complete beginner.
 
@@ -14,7 +12,7 @@ I expect you know your system well enough to navigate around, edit files, read m
 I will describe on which System / OS the blog post is based on. If you apply this knowledge to a different System / OS, I expect you know how to adapt the article accordingly (use different paths, devices names etc..).
 
 
-# Syntax I use
+## Syntax I use
 
 ## "$": Execute as user
 
