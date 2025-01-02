@@ -1,14 +1,21 @@
 +++
 date = '2025-01-01T20:05:13+01:00'
 draft = true
-title = 'Attach_encrypted_usb_drive_to_osmc'
+title = 'Attach encrypted USB disk to OSMC'
 +++
+
+{{ blogintro }}
 
 ## Preparation
 
-Attach the USB disk. Make sure you know which device it is (`dmesg`). Make sure it's not mounted (OSMC automounts!).
+Attach the USB disk to the OSMC device.
+Know which device it is (`dmesg` or `fsblk`) and make sure it's not mounted (OSMC automatically mounts devices with a known file system).
+Have the required packages installed: `apt-get install cryptsetup`
+
 
 ## Create crypto device
+
+The device `/dev/sdc` is my external USB drive.
 
 ```
 # cryptsetup luksFormat --type=luks2 /dev/sdc
@@ -54,7 +61,7 @@ Once this entry is present, the device can be started using `cryptdisks_start`
 This is optional, but properly a good idea. Write random data over the whole crypto device. This makes the device look uniform and wipes out anything unencrypted, that may have been on it before.
 
 ```
-# pv /dev/urandom > /dev/mapper/usbdisk
+# dd if=/dev/urandom of=/dev/mapper/usbdisk bs=4M status=progress
 ```
 
 Create a file system. I choose ext4:
