@@ -2,7 +2,6 @@
 layout: standalone
 title: Blog Information
 ---
-
 ## Target Audience
 
 I'm not targeting the complete beginner.
