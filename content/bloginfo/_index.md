@@ -9,7 +9,7 @@ I'm not targeting the complete beginner.
 
 I expect you know your system well enough to navigate around, edit files, read manpages and install software.
 
-I will describe on which System / OS the blog post is based on. If you apply this knowledge to a different System / OS, I expect you know how to adapt the article accordingly (use different paths, devices names etc..).
+I will describe on which System / OS a post is based on. If you apply this knowledge to a different Environment, I expect you know how to adapt the article accordingly (use different paths, devices names etc..).
 
 ## "$": Execute as user
 
@@ -22,8 +22,6 @@ $ scrot -s
 ## "#": Execute as root
 
 Commands that should be executed as root, are prepended with `#`.
-It doesn't matter if they are executed using `sudo` or `doas` or by switching to root with `su` first.
-It just means this command needs root permissions. It's up to you how you achieve that.
 
 ```
 # fdisk /dev/sda
@@ -33,7 +31,10 @@ It just means this command needs root permissions. It's up to you how you achiev
 
 You will see text or links like this: [video(1)](https://man.openbsd.org/video.1). This carries the following information:
 - I want you to read the manpage
-- The manpage is in section 1 (see [man(1)](https://man.openbsd.org/man.1) `-s` switch) and can be read with `$ man 1 video`
+- The manpage is in section 1 (see [man(1)](https://man.openbsd.org/man.1) `-s` switch) and can be read with
+- ```
+- $ man 1 video
+- ```
 - Based on the section, it show that it's a command, which differentiates it from the [video(4)](https://man.openbsd.org/video.4) device driver.
 
 ## Placeholder
