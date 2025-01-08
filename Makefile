@@ -11,7 +11,6 @@ update:
 server:
 	hugo server -D -E -F
 
-
 dev:
 	ssh codevoid.de \
 		"echo update-development > /home/www/tmp/github-update-trigger"
