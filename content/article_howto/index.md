@@ -36,6 +36,6 @@ For variable parts:
 $username       : This mandatory placeholder contains the same content across the article
 <filename>      : This mandatory placeholder can be different on every use
 [something]     : Same as above, but optional
-[...]           : Something irrelevant to the post is here, so I'm not showing it.
+[...]           : Something irrelevant is here, so I'm not showing it.
 ```
 
