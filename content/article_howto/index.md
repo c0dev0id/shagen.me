@@ -27,7 +27,6 @@ Command parameters:
 $ tar -xcvf <file.tgz> <dir>   : same as tar -x -v -c -f <file.tgz> <dir>
 ```
 
-
 For manpages:
 ```
 video(1)        : read manpage in section 1 for "video"
