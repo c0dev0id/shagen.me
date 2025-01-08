@@ -7,14 +7,13 @@ do
     case "$event" in
         */.git/*) echo "-> ignored" ;;
       */public/*) echo "-> ignored" ;;
-               *) echo; echo -n "-> testbuild: " 
+               *) echo "-> trigger update: " 
                   if hugo --quiet=true
                    then
-                       echo "ok"
-                       echo "-> deploy"
+                       echo "-> testbuild ok: deploy"
                        make update > /dev/null 2>&1 || true
                    else
-                       echo "not ok, won't deploy"
+                       echo "-> testbuild failed: skip deployment"
                    fi
     esac
 done
