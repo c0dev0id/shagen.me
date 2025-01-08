@@ -1,9 +1,9 @@
 ---
 layout: standalone
-title: Blog Information
+title: How to read my articles
 ---
 
-# Target Audience
+# 
 
 I'm not targeting the complete beginner.
 
