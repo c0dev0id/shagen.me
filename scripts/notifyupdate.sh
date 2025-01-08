@@ -12,7 +12,7 @@ do
                    then
                        echo "ok"
                        echo "-> deploy"
-                       make update > /dev/null || true
+                       make update > /dev/null 2>&1 || true
                    else
                        echo "not ok, won't deploy"
                    fi
