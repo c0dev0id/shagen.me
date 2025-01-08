@@ -15,17 +15,10 @@ I will describe on which System / OS a post is based on. If you apply this knowl
 
 I'm using a consistent syntax in my articles:
 
-
 For terminal commands:
 ```
 $ command       : execute command as user
 # command       : execute command as root
-```
-
-For command parameters:
-```
-$ tar -xcvf <file.tgz> <dir>    : same as -x -v -c -f ...
-$ pkg_add -unDinstalled <pkg>   : same as -u -n -D installed ...
 ```
 
 For manpages:
@@ -34,7 +27,6 @@ video(1)        : read manpage in section 1 for "video"
 ```
 
 The sections and their meaning are described in [man(1)](https://man.openbsd.org/man.1). I'm linking to manpages on [man.openbsd.org](https://man.openbsd.org). Commands and options may be different to other operating systems. Compare man pages in order to figure out what will work for you.
-
 
 For variable parts:
 ```
@@ -46,4 +38,10 @@ $username       : mandatory, same content across the article
 
 These can be combined like `[$username]`, which would be the same username as in all other places, but optional in this case. Options can be shown as `$ git add <[filename, -A]>` which means the parameter is mandatory, but you can choose between placing a `filename` here, or the option `-A`.
 
+For command parameters:
+```
+$ tar -xcvf <file.tgz> <dir>    : same as -x -v -c -f ...
+$ pkg_add -unDinstalled <pkg>   : same as -u -n -D installed ...
+```
+I prefer the compressed form to save space.
 
