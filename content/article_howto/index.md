@@ -17,7 +17,7 @@ I'm using a consistent syntax in my articles:
 
 
 For terminal commands:
-```texttext
+```text
 $ command       : execute command as user
 # command       : execute command as root
 ```
