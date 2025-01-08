@@ -9,8 +9,8 @@
     <li class="post-list-li">
         <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
         <span class="post-date">
-            <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">, created on {{ .Date | time.Format "2006-01-02" }}
-    {{ if .Params.tags }}(tags: {{ range .Params.tags }}{{ delimit . ", " }}{{ end }}{{end}}</time>
+            <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">, created on {{ .Date | time.Format "2006-01-02" }}</time>
+    {{ if .Params.tags }}(tags: {{ range .Params.tags }}{{ delimit . ", " }}{{ end }}{{end}}
         </span>
     </li>
 {{ end }}
