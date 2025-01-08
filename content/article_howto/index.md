@@ -22,7 +22,7 @@ $ command       : execute command as user
 # command       : execute command as root
 ```
 
-Command parameters:
+For command parameters:
 ```
 $ tar -xcvf <file.tgz> <dir>   : same as tar -x -v -c -f <file.tgz> <dir>
 ```
