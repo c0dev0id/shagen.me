@@ -38,4 +38,5 @@ code {
     border: 1px solid var(--preformatted-background-color);
     border-radius: 5px;
     word-break: keep-all;
+    word-wrap: normal;
 }
