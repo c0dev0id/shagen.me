@@ -13,19 +13,16 @@ I will describe on which System / OS a post is based on. If you apply this knowl
 
 ## Syntax I use
 
-### command line
-
 I use prefixes to indicate that a command should be run on the command line. Depending on the prefix, the command should be run as user, or superuser (root).
 ```
 $ command       : execute command as user
 # command       : execute command as root
 ```
 
-### manpages
 
 I refer to manual pages in the format [printf(3)](https://man.openbsd.org/printf.3), which can be read using the command `$ man 3 printf`. The sections and their meaning are described in [man(1)](https://man.openbsd.org/man.1). I'm linking to manpages on [man.openbsd.org](https://man.openbsd.org), which is the system I am using. Commands and options may be different to other operating systems. Compare man pages in order to figure out what will work for you.
 
-### placeholders
+
 I use three types of placeholders:
 ```
 $username       : This placeholder contains the same content across the article
