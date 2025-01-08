@@ -33,7 +33,6 @@ a:hover {
 }
 code {
     padding: 2px;
-    background-color: var(--preformatted-background-color);
     color: var(--preformatted-text-color);
     word-break: keep-all;
 }
