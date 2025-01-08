@@ -11,7 +11,7 @@ I'm not targeting the complete beginner.  I expect you know your system well eno
 
 I will describe on which System / OS a post is based on. If you apply this knowledge to a different Environment, I expect you know how to adapt the article accordingly (use different paths, devices names etc..).
 
-# Syntax I use
+## Syntax I use
 
 I use prefixes to indicate that a command should be run on the command line. Depending on the prefix, the command should be run as user, or superuser (root).
 ```
