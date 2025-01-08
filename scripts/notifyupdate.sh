@@ -1,13 +1,12 @@
 #!/bin/sh -e
 cd /home/sdk/blog
-inotifywait -m -r . -e close_write -e move -e create -e delete \
+inotifywait -m -r . -e modify -e move -e create -e delete \
     | while read event
 do
-    echo -n "Got event: $event "
     case "$event" in
-        */.git/*) echo "-> ignored" ;;
-      */public/*) echo "-> ignored" ;;
-               *) echo "-> trigger update" 
+        */.git/*) ;;
+      */public/*) ;;
+               *) echo "Got $event -> trigger update" 
                   if hugo --quiet=true
                    then
                        echo "-> testbuild ok: deploy"
