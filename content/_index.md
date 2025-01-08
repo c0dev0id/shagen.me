@@ -1,5 +1,5 @@
 ---
-title: home
+title: Home
 ---
 
 Do you remember Microsoft Frontpage?
