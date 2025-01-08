@@ -37,6 +37,6 @@ $username       : mandatory, same content across the article
 [$username]     : optional, same content across the article
 <filename>      : mandatory, different content on each use
 [something]     : optional, different content on each use
-[...]           : Something irrelevant is here, so I'm not showing it.
+[...]           : Something irrelevant is skipped here
 ```
 
