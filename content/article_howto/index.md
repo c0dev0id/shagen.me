@@ -33,9 +33,10 @@ The sections and their meaning are described in [man(1)](https://man.openbsd.org
 
 For variable parts:
 ```
-$username       : This mandatory placeholder contains the same content across the article
-<filename>      : This mandatory placeholder can be different on every use
-[something]     : Same as above, but optional
+$username       : mandatory, same content across the article
+<filename>      : mandatory, different content on each use
+[something]     : optional, different content on each use
+[$username]     : optional, same content across the article
 [...]           : Something irrelevant is here, so I'm not showing it.
 ```
 
