@@ -13,15 +13,17 @@ I will describe on which System / OS a post is based on. If you apply this knowl
 
 ## Syntax I use
 
-I'm using a consistent syntax in my articles. 
+I'm using a consistent syntax in my articles:
 
-Terminal commands:
+
+For terminal commands:
 ```
 $ command       : execute command as user
 # command       : execute command as root
 ```
 
-Manpages:
+
+For manpages:
 ```
 video(1)        : read manpage in section 1 for "video"
 ```
@@ -29,7 +31,7 @@ video(1)        : read manpage in section 1 for "video"
 The sections and their meaning are described in [man(1)](https://man.openbsd.org/man.1). I'm linking to manpages on [man.openbsd.org](https://man.openbsd.org). Commands and options may be different to other operating systems. Compare man pages in order to figure out what will work for you.
 
 
-I use three types of placeholders:
+For variable parts:
 ```
 $username       : This placeholder contains the same content across the article
 <filename>      : This placeholder can be different on every use
