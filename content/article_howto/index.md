@@ -22,6 +22,11 @@ $ command       : execute command as user
 # command       : execute command as root
 ```
 
+Command parameters:
+```
+$ tar -xcvf <file.tgz> <dir>    : same as tar -x -c -v -f <file.tgz> <dir>
+```
+
 
 For manpages:
 ```
@@ -39,5 +44,6 @@ $username       : mandatory, same content across the article
 [...]           : Something irrelevant is skipped here
 ```
 
-These can be combined like `[$username]`, which would be the same username as in all other places, but optional in this case. Options can be shown as `$ git add <[filename, -A]>` which means the parameter is mandatory, but you can choose between placing a `filename` here, or the option `-A`
+These can be combined like `[$username]`, which would be the same username as in all other places, but optional in this case. Options can be shown as `$ git add <[filename, -A]>` which means the parameter is mandatory, but you can choose between placing a `filename` here, or the option `-A`.
+
 
