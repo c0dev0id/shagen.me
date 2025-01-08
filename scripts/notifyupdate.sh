@@ -7,7 +7,7 @@ do
         */.git/*) ;;
       */public/*) ;;
                *) echo "Got $event -> trigger update" 
-                  if hugo --quiet=true
+                  if hugo -FDE
                    then
                        echo "-> testbuild ok: deploy"
                        make update || true
