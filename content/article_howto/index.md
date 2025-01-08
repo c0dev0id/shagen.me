@@ -13,11 +13,13 @@ I will describe on which System / OS a post is based on. If you apply this knowl
 
 ## Syntax I use
 
+On the command line:
 ```
 $ command       : execute command as user
 # command       : execute command as root
 ```
 
+Manpages:
 ```
 video(1)        : read manpage in section 1 for "video"
 ```
