@@ -19,7 +19,7 @@ $ command       : execute command as user
 ```
 
 ```
-video(1)         : read manpage in section 1 for "video"
+video(1)        : read manpage in section 1 for "video"
 ```
 
 The sections and their meaning are described in [man(1)](https://man.openbsd.org/man.1). I'm linking to manpages on [man.openbsd.org](https://man.openbsd.org), which is the system I am using. Commands and options may be different to other operating systems. Compare man pages in order to figure out what will work for you.
