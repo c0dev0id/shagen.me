@@ -1,11 +1,12 @@
 #!/bin/sh -xe
 cd /home/sdk/blog
-inotifywait -m --exclude public --exclude .git -r . -e modify -e move -e create -e delete \
+inotifywait -m -r . -e modify -e move -e create -e delete \
     | while read event
 do
     echo "Processeing event: $event"
     case "$event" in
-        *.git*) echo "Ignoring change in .git/" ;;
+        */.git/*) echo "Ignoring change in /.git/" ;;
+        */public/*) echo "Ignoring change in /public/" ;;
              *) hugo && make update || true ;;
     esac
 done
