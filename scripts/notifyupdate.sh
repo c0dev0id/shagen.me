@@ -3,7 +3,7 @@ cd /home/sdk/blog
 inotifywait -m -r . -e modify -e move -e create -e delete \
     | while read event
 do
-    echo -n "Got event: $event"
+    echo -n "Got event: $event "
     case "$event" in
         */.git/*) echo "-> ignored" ;;
       */public/*) echo "-> ignored" ;;
