@@ -7,7 +7,7 @@ do
     case "$event" in
         */.git/*) echo "-> ignored" ;;
       */public/*) echo "-> ignored" ;;
-               *) echo "-> trigger update: " 
+               *) echo "-> trigger update" 
                   if hugo --quiet=true
                    then
                        echo "-> testbuild ok: deploy"
