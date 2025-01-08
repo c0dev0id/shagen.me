@@ -7,7 +7,7 @@ do
     case "$event" in
         */.git/*) echo "-> ignored" ;;
       */public/*) echo "-> ignored" ;;
-               *) echo -n "-> testbuild: " 
+               *) echo; echo -n "-> testbuild: " 
                   if hugo --quiet=true
                    then
                        echo "ok"
