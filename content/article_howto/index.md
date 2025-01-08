@@ -11,9 +11,9 @@ I'm not targeting the complete beginner. I expect you know your system well enou
 
 I will describe on which System / OS a post is based on. If you apply this knowledge to a different environment, I expect you know how to adapt the article accordingly (use different paths, devices names, command arguments etc..).
 
-## Syntax I use
+## Syntax conventions
 
-I'm using a consistent syntax in my articles:
+I'm some relatively common conventions in my articles to avoid repetitive explanations.
 
 For terminal commands:
 ```
