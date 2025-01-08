@@ -1,6 +1,6 @@
 #!/bin/sh -e
 cd /home/sdk/blog
-inotifywait -m -r . -e modify -e move -e create -e delete \
+inotifywait -m -r . -e close_write -e move -e create -e delete \
     | while read event
 do
     echo -n "Got event: $event "
