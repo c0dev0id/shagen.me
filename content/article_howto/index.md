@@ -13,7 +13,7 @@ I will describe on which System / OS a post is based on. If you apply this knowl
 
 ## Syntax I use
 
-On the command line:
+Terminal commands:
 ```
 $ command       : execute command as user
 # command       : execute command as root
@@ -24,7 +24,7 @@ Manpages:
 video(1)        : read manpage in section 1 for "video"
 ```
 
-The sections and their meaning are described in [man(1)](https://man.openbsd.org/man.1). I'm linking to manpages on [man.openbsd.org](https://man.openbsd.org), which is the system I am using. Commands and options may be different to other operating systems. Compare man pages in order to figure out what will work for you.
+The sections and their meaning are described in [man(1)](https://man.openbsd.org/man.1). I'm linking to manpages on [man.openbsd.org](https://man.openbsd.org). Commands and options may be different to other operating systems. Compare man pages in order to figure out what will work for you.
 
 
 I use three types of placeholders:
