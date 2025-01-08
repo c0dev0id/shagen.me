@@ -1,12 +1,22 @@
 ---
-title: Notes
+title: Articles
 menu:
   main:
     weight: 2
 ---
 
-# Notes
+# Articles
 
-I don't have the patience to write well researched blog posts, and so I decided to call this page **Notes**.
-It will contain snippets of information that aren't necessarily well researched or even well written.
-But they should contain enough information to get the point across.
+Sometimes I write about things.
+
+I use the following syntax in my technical posts:
+
+```
+$ -> execute command as user
+# -> execute command as root
+printf(3) -> read the printf in section 3 (man 3 printf)
+$filename -> variable that's consistent within a post
+<filename> -> mandatory placeholder
+[option] -> optional placeholder
+```
+
