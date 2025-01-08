@@ -24,7 +24,7 @@ $ command       : execute command as user
 
 Command parameters:
 ```
-$ tar -xcvf <file.tgz> <dir>    : same as tar -x -v -c -f <file.tgz> <dir>
+$ tar -xcvf <file.tgz> <dir>   : same as tar -x -v -c -f <file.tgz> <dir>
 ```
 
 
