@@ -32,8 +32,9 @@ a:hover {
     text-decoration: underline;
 }
 code {
-background-color: var(--preformatted-background-color);
-color: var(--preformatted-text-color);
-border: 1px solid var(--preformatted-background-color);
-border-radius: 5px;
+    padding: 4px;
+    background-color: var(--preformatted-background-color);
+    color: var(--preformatted-text-color);
+    border: 1px solid var(--preformatted-background-color);
+    border-radius: 5px;
 }
