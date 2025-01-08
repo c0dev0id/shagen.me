@@ -1,4 +1,5 @@
 ---
+layout: standalone
 title: How to read my articles
 ---
 
