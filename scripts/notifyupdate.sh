@@ -10,7 +10,7 @@ do
                   if hugo --quiet=true
                    then
                        echo "-> testbuild ok: deploy"
-                       make update > /dev/null 2>&1 || true
+                       make update || true
                    else
                        echo "-> testbuild failed: skip deployment"
                    fi
