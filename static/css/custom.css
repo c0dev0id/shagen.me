@@ -37,6 +37,4 @@ code {
     color: var(--preformatted-text-color);
     border: 1px solid var(--preformatted-background-color);
     border-radius: 5px;
-    white-space: pre-wrap;
-    word-wrap: normal;
 }
