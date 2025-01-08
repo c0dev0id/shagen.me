@@ -3,8 +3,8 @@ cd /home/sdk/blog
 inotifywait -m -r . -e modify -e move -e create -e delete \
     | while read event
 do
-    echo "Processeing event: $line"
-    case "$line" in
+    echo "Processeing event: $event"
+    case "$event" in
         *.git*) echo "Ignoring change in .git/" ;;
              *) hugo && make update || true ;;
     esac
