@@ -9,7 +9,7 @@ title: How to read my articles
 
 I'm not targeting the complete beginner. I expect you know your system well enough to navigate around, edit files, read manpages and install software.
 
-I will describe on which System / OS a post is based on. If you apply this knowledge to a different Environment, I expect you know how to adapt the article accordingly (use different paths, devices names etc..).
+I will describe on which System / OS a post is based on. If you apply this knowledge to a different environment, I expect you know how to adapt the article accordingly (use different paths, devices names, command arguments etc..).
 
 ## Syntax I use
 
