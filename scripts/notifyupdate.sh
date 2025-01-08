@@ -1,4 +1,4 @@
-#!/bin/sh -xe
+#!/bin/sh -e
 cd /home/sdk/blog
 inotifywait -m -r . -e modify -e move -e create -e delete \
     | while read event
@@ -12,7 +12,7 @@ do
                    then
                        echo "ok"
                        echo "-> deploy"
-                       make update
+                       make update || true
                    else
                        echo "not ok, won't deploy"
                    fi
