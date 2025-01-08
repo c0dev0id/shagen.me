@@ -26,5 +26,8 @@ maintenance:
 watch:
 	 while true; \
 	 do \
-	 	./scripts/deploy_hugo.sh || true; \
+		./scripts/deploy_hugo.sh || true; \
 	 done || true
+
+notify-update:
+	./scripts/notifyupdate.sh
