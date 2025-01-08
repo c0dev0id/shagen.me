@@ -19,8 +19,13 @@ $ command       : execute command as user
 # command       : execute command as root
 ```
 
+I refer to manual pages in the format [printf(3)](https://man.openbsd.org/printf.3), which can be read using the command `$ man 3 printf`.
 
-I refer to manual pages in the format [printf(3)](https://man.openbsd.org/printf.3), which can be read using the command `$ man 3 printf`. The sections and their meaning are described in [man(1)](https://man.openbsd.org/man.1). I'm linking to manpages on [man.openbsd.org](https://man.openbsd.org), which is the system I am using. Commands and options may be different to other operating systems. Compare man pages in order to figure out what will work for you.
+```
+video(1)          : read manpage in section 1 for "video"
+```
+
+The sections and their meaning are described in [man(1)](https://man.openbsd.org/man.1). I'm linking to manpages on [man.openbsd.org](https://man.openbsd.org), which is the system I am using. Commands and options may be different to other operating systems. Compare man pages in order to figure out what will work for you.
 
 
 I use three types of placeholders:
