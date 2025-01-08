@@ -28,7 +28,7 @@ video(1)        : read manpage in section 1 for "video"
 
 The sections and their meaning are described in [man(1)](https://man.openbsd.org/man.1). I'm linking to manpages on [man.openbsd.org](https://man.openbsd.org). Commands and options may be different to other operating systems. Compare man pages in order to figure out what will work for you.
 
-If you know the manpage sections, you immediately know that video(1) refers to the video command, while video(4) refers to the device driver with the same name.
+Once you know the manpage sections, you immediately know that [video(1)](https://man.openbsd.org/video.1) refers to the video command, while [video(4)](https://man.openbsd.org/video.4) refers to the device driver with the same name.
 
 For variable parts:
 ```
