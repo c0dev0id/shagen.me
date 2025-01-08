@@ -31,10 +31,3 @@ a:link, a:visited, a:active {
 a:hover {
     text-decoration: underline;
 }
-code {
-    padding: 2px;
-    color: var(--preformatted-text-color);
-    border: 1px solid var(--preformatted-text-color);
-    border-radius: 3px;
-    word-break: keep-all;
-}
