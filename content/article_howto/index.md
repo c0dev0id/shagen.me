@@ -26,6 +26,7 @@ For command parameters:
 ```
 $ tar -xcvf <file.tgz> <dir>   : same as tar -x -v -c -f <file.tgz> <dir>
 ```
+I prefer the compressed parameter form
 
 For manpages:
 ```
