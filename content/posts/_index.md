@@ -18,6 +18,6 @@ printf(3) : read the printf manpage in section 3 (man 3 printf)
 $file     : variable that's consistent within the article
 <file>    : mandatory placeholder
 ```
-I don't target the beginner. I assume you know how to install software
-and learn about unknown programs and commands.
+I don't target the absolute beginner. I assume you know how to install
+software and learn about unknown programs and commands.
 
