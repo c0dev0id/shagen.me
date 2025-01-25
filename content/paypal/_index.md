@@ -16,4 +16,4 @@ But, if you have a reason to send me some bucks, here's the button to do so:
 
 {{< paypal >}}
 
-Friends and Family, can use the [paypal.me](https://paypal.me/xkpb3) link.
+Friends and Family can use the [paypal.me](https://paypal.me/xkpb3) link and choose "For Friends and Family" in the screen that pops up at some point to get around the paypal fee.
