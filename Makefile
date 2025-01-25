@@ -4,6 +4,7 @@ clean:
 	rm -rf public resources
 
 update:
+	git pull --autostash || true
 	git add -A . || true
 	git commit -m "Content Update" || true
 	git push || true
